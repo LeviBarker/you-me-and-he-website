@@ -1,113 +1,120 @@
 import Image from "next/image";
+import Head from "next/head";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 w-full max-w-5xl items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:size-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
-
-      <div className="relative z-[-1] flex place-items-center before:absolute before:h-[300px] before:w-full before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 sm:before:w-[480px] sm:after:w-[240px] before:lg:h-[360px]">
+    <main className="flex min-h-screen flex-col items-start justify-between p-12 md:p-24 md:pr-96 h-screen overflow-auto">
+      <nav className="font-serif md:fixed relative right-0 top-0 w-full md:w-64 pr-8 pt-0 md:pt-16 flex flex-col items-end justify-start">
         <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
+          alt="logo"
+          width={172}
+          height={0}
+          src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/369253fb-3cd2-42b5-b1fa-3346c00229f1/YouMeAndHeLogo-r-01.png"
         />
-      </div>
-
-      <div className="mb-32 grid text-center lg:mb-0 lg:w-full lg:max-w-5xl lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-sm opacity-50">
-            Explore starter templates for Next.js.
-          </p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className="mb-3 text-2xl font-semibold">
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className="m-0 max-w-[30ch] text-balance text-sm opacity-50">
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
+        <ul className="text-right py-6 hidden md:inline">
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#pricing">Pricing</a>
+          </li>
+        </ul>
+        <div className="flex items-center gap-2 py-2">
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-900 text-white">
+            <FontAwesomeIcon icon={faFacebook} />
+          </div>
+          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white">
+            <FontAwesomeIcon icon={faInstagram} />
+          </div>
+        </div>
+      </nav>
+      <section id="home" className="pb-16 text-stone-700">
+        <h1 className="text-5xl font-bold font-serif pb-4">Hi there,</h1>
+        <p className="pb-4 text-stone-500">
+          Nice to see you! We do photography, videography, graphic design and
+          web design. We'd love to work with you for your next wedding, portrait
+          shoot or business venture.
+        </p>
+        <button className="text-sm px-4 py-2 border-stone-800 border-2 border-solid hover:bg-stone-800 hover:text-stone-50">
+          Connect with us
+        </button>
+      </section>
+      <section className="pb-16">
+        <Image
+          width={0}
+          height={0}
+          sizes="100vw"
+          style={{ width: "100%", height: "auto" }}
+          alt=""
+          src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639070768773-2WZXS8KX21VCLOFER9IH/-q18jlvQ.jpeg"
+        />
+      </section>
+      <section id="pricing" className="w-full">
+        <h2 className="font-serif text-3xl font-bold text-stone-700 pb-4">
+          Pricing
+        </h2>
+        <p className="pb-4 text-stone-500">
+          We’d love to capture your special moment to cherish for years to come.
+          If any of our prices don’t seem to work well for you, please feel free
+          to contact us, we’d like to work something out with you! Below you’ll
+          find what we typically charge for various occasions.
+        </p>
+        <article className="flex items-start justify-between w-full">
+          <div className="p-4">
+            <Image
+              alt=""
+              width={280}
+              height={0}
+              src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
+            />
+            <h3 className="font-bold font-serif text-xl pt-2">
+              Personal (1-3)
+            </h3>
+            <span className="font-bold font-serif">$250-350</span>
+            <ul className="list-disc pl-8 pt-2">
+              <li>1-3 hour sessions</li>
+              <li>25-35 high-quality images</li>
+              <li>Includes 2 wardrobe changes, $20+ per location change</li>
+            </ul>
+          </div>
+          <div className="p-4">
+            <Image
+              alt=""
+              width={280}
+              height={0}
+              src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
+            />
+            <h3 className="font-bold font-serif text-xl pt-2">
+              Group (4+ people)
+            </h3>
+            <span className="font-bold font-serif">$300-400</span>
+            <ul className="list-disc pl-8 pt-2">
+              <li>1-3 hour sessions</li>
+              <li>30-40 high-quality images</li>
+              <li>$20+ per location change</li>
+            </ul>
+          </div>
+          <div className="p-4">
+            <Image
+              alt=""
+              width={280}
+              height={0}
+              src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
+            />
+            <h3 className="font-bold font-serif text-xl pt-2">
+              Personal (1-3)
+            </h3>
+            <span className="font-bold font-serif">$250-350</span>
+            <ul className="list-disc pl-8 pt-2">
+              <li>1-3 hour sessions</li>
+              <li>25-35 high-quality images</li>
+              <li>Includes 2 wardrobe changes, $20+ per location change</li>
+            </ul>
+          </div>
+        </article>
+      </section>
     </main>
   );
 }
