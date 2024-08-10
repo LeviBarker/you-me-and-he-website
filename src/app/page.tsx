@@ -30,9 +30,9 @@ export default function Home() {
           </div>
         </div>
       </nav>
-      <section id="home" className="pb-16 text-stone-700">
+      <section id="home" className="pb-16 text-stone-800">
         <h1 className="text-5xl font-bold font-serif pb-4">Hi there,</h1>
-        <p className="pb-4 text-stone-500">
+        <p className="pb-4 text-stone-600">
           Nice to see you! We do photography, videography, graphic design and
           web design. We&apos;d love to work with you for your next wedding, portrait
           shoot or business venture.
@@ -52,16 +52,16 @@ export default function Home() {
         />
       </section>
       <section id="pricing" className="w-full">
-        <h2 className="font-serif text-3xl font-bold text-stone-700 pb-4">
+        <h2 className="font-serif text-3xl font-bold text-stone-800 pb-4">
           Pricing
         </h2>
-        <p className="pb-4 text-stone-500">
+        <p className="pb-4 text-stone-600">
           We’d love to capture your special moment to cherish for years to come.
           If any of our prices don’t seem to work well for you, please feel free
           to contact us, we’d like to work something out with you! Below you’ll
           find what we typically charge for various occasions.
         </p>
-        <article className="flex items-start justify-between w-full">
+        <article className="flex basis-0 items-start justify-between w-full">
           <div className="p-4">
             <Image
               alt=""
@@ -87,13 +87,13 @@ export default function Home() {
               src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
             />
             <h3 className="font-bold font-serif text-xl pt-2">
-              Group (4+ people)
+              Personal (1-3)
             </h3>
-            <span className="font-bold font-serif">$300-400</span>
+            <span className="font-bold font-serif">$250-350</span>
             <ul className="list-disc pl-8 pt-2">
               <li>1-3 hour sessions</li>
-              <li>30-40 high-quality images</li>
-              <li>$20+ per location change</li>
+              <li>25-35 high-quality images</li>
+              <li>Includes 2 wardrobe changes, $20+ per location change</li>
             </ul>
           </div>
           <div className="p-4">
