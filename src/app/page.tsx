@@ -34,7 +34,7 @@ export default function Home() {
         <h1 className="text-5xl font-bold font-serif pb-4">Hi there,</h1>
         <p className="pb-4 text-stone-500">
           Nice to see you! We do photography, videography, graphic design and
-          web design. We'd love to work with you for your next wedding, portrait
+          web design. We&apos;d love to work with you for your next wedding, portrait
           shoot or business venture.
         </p>
         <button className="text-sm px-4 py-2 border-stone-800 border-2 border-solid hover:bg-stone-800 hover:text-stone-50">
