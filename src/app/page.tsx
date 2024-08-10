@@ -2,6 +2,7 @@ import Image from "next/image";
 import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
+import Carousel from "@/components/Carousel";
 
 export default function Home() {
   return (
@@ -42,14 +43,7 @@ export default function Home() {
         </button>
       </section>
       <section className="pb-16">
-        <Image
-          width={0}
-          height={0}
-          sizes="100vw"
-          style={{ width: "100%", height: "auto" }}
-          alt=""
-          src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639070768773-2WZXS8KX21VCLOFER9IH/-q18jlvQ.jpeg"
-        />
+        <Carousel />
       </section>
       <section id="pricing" className="w-full">
         <h2 className="font-serif text-3xl font-bold text-stone-800 pb-4">
