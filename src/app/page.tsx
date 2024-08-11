@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "@/components/Carousel";
-import { TagIcon } from "@heroicons/react/24/outline";
+import { EnvelopeIcon, TagIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
 
@@ -41,7 +41,7 @@ export default function Home() {
 
   return (
     <main className="flex min-h-screen flex-col items-start justify-between p-12 md:p-24 md:pr-96 h-screen overflow-auto">
-      <nav className="font-serif md:fixed relative right-0 top-0 w-full md:w-64 pr-8 pt-0 md:pt-16 flex flex-col items-end justify-start">
+      <nav className="font-serif md:fixed relative right-0 top-0 w-full md:w-64 pr-0 md:pr-8 pt-0 md:pt-16 flex flex-col items-end justify-start">
         <Image
           alt="logo"
           width={172}
@@ -72,9 +72,10 @@ export default function Home() {
           web design. We&apos;d love to work with you for your next wedding,
           portrait shoot or business venture.
         </p>
-        <button className="text-sm px-4 py-2 border-stone-800 border-2 border-solid hover:bg-stone-800 hover:text-stone-50">
+        <a href="mailto:contact@youmeandhe.com" className="text-sm px-4 py-2 border-stone-800 border-2 border-solid hover:bg-stone-800 hover:text-stone-50 inline-flex gap-1 items-center">
+          <EnvelopeIcon className="h-6 w-6"/>
           Connect with us
-        </button>
+        </a>
       </section>
       <section className="pb-16">
         <Carousel />
@@ -117,6 +118,9 @@ export default function Home() {
           ))}
         </article>
       </section>
+      <footer className="w-full text-center text-sm text-stone-300 p-16">
+        Copyright You, Me & He LLC 2018-2024
+      </footer>
     </main>
   );
 }
