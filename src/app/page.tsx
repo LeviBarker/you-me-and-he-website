@@ -3,8 +3,42 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "@/components/Carousel";
+import { TagIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
+
+  const prices = [
+    {
+      title: "Personal (1-3 people)",
+      price: "$250-350",
+      image: 'https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg',
+      points: [
+        '1-3 hour sessions',
+        '25-35 high-quality images',
+        'Includes 2 wardrobe changes, $20+ per location change'
+      ]
+    },
+    {
+      title: "Group (4+ people)",
+      price: "$300-400",
+      image: 'https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069629313-CWCHP3AC8K5LTB7GPD3W/_DSC2792.JPG',
+      points: [
+        '1-3 hour sessions',
+        '30-40 high-quality images',
+        '$20+ per location change'
+      ]
+    },
+    {
+      title: "Headshots",
+      price: "$50 Base Fee + $20 Per Subject",
+      image: 'https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1656080346074-VDHSRBSH2BGRANGLKY2H/2CD00F42-B6A5-4787-8B36-8BE641E3E637.jpeg',
+      points: [
+        'Unlimited session time',
+        '3-5 high-quality images per subject'
+      ]
+    }
+  ]
+
   return (
     <main className="flex min-h-screen flex-col items-start justify-between p-12 md:p-24 md:pr-96 h-screen overflow-auto">
       <nav className="font-serif md:fixed relative right-0 top-0 w-full md:w-64 pr-8 pt-0 md:pt-16 flex flex-col items-end justify-start">
@@ -35,8 +69,8 @@ export default function Home() {
         <h1 className="text-5xl font-bold font-serif pb-4">Hi there,</h1>
         <p className="pb-4 text-stone-600">
           Nice to see you! We do photography, videography, graphic design and
-          web design. We&apos;d love to work with you for your next wedding, portrait
-          shoot or business venture.
+          web design. We&apos;d love to work with you for your next wedding,
+          portrait shoot or business venture.
         </p>
         <button className="text-sm px-4 py-2 border-stone-800 border-2 border-solid hover:bg-stone-800 hover:text-stone-50">
           Connect with us
@@ -45,9 +79,12 @@ export default function Home() {
       <section className="pb-16">
         <Carousel />
       </section>
+      <section>
+      </section>
       <section id="pricing" className="w-full">
-        <h2 className="font-serif text-3xl font-bold text-stone-800 pb-4">
-          Pricing
+        <h2 className="font-serif text-3xl font-bold text-stone-800 pb-4 flex items-center gap-1">
+        <TagIcon className="h-8" />
+        Pricing
         </h2>
         <p className="pb-4 text-stone-600">
           We’d love to capture your special moment to cherish for years to come.
@@ -55,58 +92,29 @@ export default function Home() {
           to contact us, we’d like to work something out with you! Below you’ll
           find what we typically charge for various occasions.
         </p>
-        <article className="flex basis-0 items-start justify-between w-full">
-          <div className="p-4">
-            <Image
-              alt=""
-              width={280}
-              height={0}
-              src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
-            />
-            <h3 className="font-bold font-serif text-xl pt-2">
-              Personal (1-3)
-            </h3>
-            <span className="font-bold font-serif">$250-350</span>
-            <ul className="list-disc pl-8 pt-2">
-              <li>1-3 hour sessions</li>
-              <li>25-35 high-quality images</li>
-              <li>Includes 2 wardrobe changes, $20+ per location change</li>
-            </ul>
-          </div>
-          <div className="p-4">
-            <Image
-              alt=""
-              width={280}
-              height={0}
-              src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
-            />
-            <h3 className="font-bold font-serif text-xl pt-2">
-              Personal (1-3)
-            </h3>
-            <span className="font-bold font-serif">$250-350</span>
-            <ul className="list-disc pl-8 pt-2">
-              <li>1-3 hour sessions</li>
-              <li>25-35 high-quality images</li>
-              <li>Includes 2 wardrobe changes, $20+ per location change</li>
-            </ul>
-          </div>
-          <div className="p-4">
-            <Image
-              alt=""
-              width={280}
-              height={0}
-              src="https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg"
-            />
-            <h3 className="font-bold font-serif text-xl pt-2">
-              Personal (1-3)
-            </h3>
-            <span className="font-bold font-serif">$250-350</span>
-            <ul className="list-disc pl-8 pt-2">
-              <li>1-3 hour sessions</li>
-              <li>25-35 high-quality images</li>
-              <li>Includes 2 wardrobe changes, $20+ per location change</li>
-            </ul>
-          </div>
+        <article className="flex flex-col lg:flex-row gap-8 basis-0 items-start justify-between w-full">
+          {prices.map((price) => (
+            <div key={price.title} className="w-full">
+              <div className="relative w-full h-64">
+                <Image
+                  alt=""
+                  sizes="100vw"
+                  fill
+                  style={{objectFit: "cover"}}
+                  src={price.image}
+                />
+              </div>
+              <h3 className="font-bold font-serif text-xl pt-2">
+                {price.title}
+              </h3>
+              <span className="font-bold font-serif">{price.price}</span>
+              <ul className="list-disc pl-8 pt-2">
+                {price.points.map(point => (
+                  <li key={point}>{point}</li>
+                ))}
+               </ul>
+            </div>
+          ))}
         </article>
       </section>
     </main>
