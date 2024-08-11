@@ -57,12 +57,12 @@ export default function Home() {
           </li>
         </ul>
         <div className="flex items-center gap-2 py-2">
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-900 text-white">
-            <FontAwesomeIcon icon={faFacebook} />
-          </div>
-          <div className="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white">
+          <a href="https://www.instagram.com/you_me_and_he/" className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-900 text-white">
             <FontAwesomeIcon icon={faInstagram} />
-          </div>
+          </a>
+          <a href="https://www.facebook.com/YouMeAndHeLLC" className="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white">
+            <FontAwesomeIcon icon={faFacebook} />
+          </a>
         </div>
       </nav>
       <section id="home" className="pb-16 text-stone-800">
@@ -87,7 +87,7 @@ export default function Home() {
         <TagIcon className="h-8" />
         Pricing
         </h2>
-        <p className="pb-4 text-stone-600">
+        <p className="pb-6 text-stone-600">
           We’d love to capture your special moment to cherish for years to come.
           If any of our prices don’t seem to work well for you, please feel free
           to contact us, we’d like to work something out with you! Below you’ll

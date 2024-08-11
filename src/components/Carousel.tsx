@@ -11,10 +11,8 @@ const Carousel = () => {
     Fade(),
   ]);
   const images = [
-    "https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639070768773-2WZXS8KX21VCLOFER9IH/-q18jlvQ.jpeg",
-    "https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639070653996-0360K28B9C6LGMNTXFTM/_DSC3193.JPG",
-    "https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1717978264922-KBPPY9G221KAU0CGHXW8/_dsc5749_2.jpeg",
-    "https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1609954239732-OUNLRH0T5CJRYX4Z1SOP/_DSC4580.JPG"
+    "https://firebasestorage.googleapis.com/v0/b/youmeandhe-b605e.appspot.com/o/_DSC6999.jpg?alt=media&token=dbd793ed-9c57-44df-94fa-bced4e1d41f5",
+    "https://firebasestorage.googleapis.com/v0/b/youmeandhe-b605e.appspot.com/o/_DSC4123.jpg?alt=media&token=b31f302e-fbbb-47d7-ae11-dd8f73e122a3"
   ];
 
   return (
