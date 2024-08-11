@@ -57,10 +57,10 @@ export default function Home() {
           </li>
         </ul>
         <div className="flex items-center gap-2 py-2">
-          <a href="https://www.instagram.com/you_me_and_he/" className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-900 text-white">
+          <a href="https://www.instagram.com/you_me_and_he/" className="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white">
             <FontAwesomeIcon icon={faInstagram} />
           </a>
-          <a href="https://www.facebook.com/YouMeAndHeLLC" className="w-8 h-8 flex items-center justify-center rounded-full bg-pink-600 text-white">
+          <a href="https://www.facebook.com/YouMeAndHeLLC" className="w-8 h-8 flex items-center justify-center rounded-full bg-blue-900 text-white">
             <FontAwesomeIcon icon={faFacebook} />
           </a>
         </div>
