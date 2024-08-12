@@ -10,6 +10,7 @@ export default function Home() {
   const prices = [
     {
       title: "Personal (1-3 people)",
+      titleColor: '#ccfbf1',
       price: "$250-350",
       image: 'https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069574016-285J18ONPFV3FIDUYL2K/_DSC3271.jpg',
       points: [
@@ -20,6 +21,7 @@ export default function Home() {
     },
     {
       title: "Group (4+ people)",
+      titleColor: '#ffe4e6',
       price: "$300-400",
       image: 'https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1639069629313-CWCHP3AC8K5LTB7GPD3W/_DSC2792.JPG',
       points: [
@@ -30,6 +32,7 @@ export default function Home() {
     },
     {
       title: "Headshots",
+      titleColor: '#dcfce7',
       price: "$50 Base Fee + $20 Per Subject",
       image: 'https://images.squarespace-cdn.com/content/v1/5bd72d07ebfc7f4a2b44a896/1656080346074-VDHSRBSH2BGRANGLKY2H/2CD00F42-B6A5-4787-8B36-8BE641E3E637.jpeg',
       points: [
@@ -93,23 +96,23 @@ export default function Home() {
           to contact us, we’d like to work something out with you! Below you’ll
           find what we typically charge for various occasions.
         </p>
-        <article className="flex flex-col lg:flex-row gap-8 basis-0 items-start justify-between w-full">
+        <article className="flex flex-col lg:flex-row gap-8 basis-0 items-stretch justify-between w-full">
           {prices.map((price) => (
-            <div key={price.title} className="w-full">
+            <div key={price.title} className="w-full shadow-lg rounded-lg hover:shadow-xl">
               <div className="relative w-full h-64">
                 <Image
                   alt=""
                   sizes="100vw"
                   fill
-                  style={{objectFit: "cover"}}
+                  style={{objectFit: "cover", borderTopLeftRadius: 8, borderTopRightRadius: 8}}
                   src={price.image}
                 />
               </div>
-              <h3 className="font-bold font-serif text-xl pt-2">
+              <h3 className="font-bold font-serif text-xl px-4 pt-4">
                 {price.title}
               </h3>
-              <span className="font-bold font-serif">{price.price}</span>
-              <ul className="list-disc pl-8 pt-2">
+              <span className="font-bold font-serif px-4">{price.price}</span>
+              <ul className="list-disc pl-8 p-2 pb-4">
                 {price.points.map(point => (
                   <li key={point}>{point}</li>
                 ))}

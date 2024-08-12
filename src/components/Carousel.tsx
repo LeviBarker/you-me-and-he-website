@@ -19,7 +19,7 @@ const Carousel = () => {
     <div className="embla" ref={emblaRef}>
       <div className="embla__container">
         {images.map((image) => (
-          <div key={image} className="embla__slide">
+          <div key={image} className="embla__slide rounded-lg overflow-clip">
             <img src={image} />
           </div>
         ))}
