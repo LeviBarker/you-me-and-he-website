@@ -3,7 +3,7 @@ import Head from "next/head";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faFacebook, faInstagram } from "@fortawesome/free-brands-svg-icons";
 import Carousel from "@/components/Carousel";
-import { EnvelopeIcon, TagIcon } from "@heroicons/react/24/outline";
+import { BanknotesIcon, EnvelopeIcon, TagIcon } from "@heroicons/react/24/outline";
 
 export default function Home() {
 
@@ -38,6 +38,16 @@ export default function Home() {
       points: [
         'Unlimited session time',
         '3-5 high-quality images per subject'
+      ]
+    },
+    {
+      title: "À La Carte Website",
+      price: "Contact us (pricing varies)",
+      image: 'https://firebasestorage.googleapis.com/v0/b/youmeandhe-b605e.appspot.com/o/Screenshot%202024-08-14%20at%2010.13.21%20PM.png?alt=media&token=856a3796-b412-4040-a6f5-9f28e335d9fa',
+      points: [
+        'Options of simple web design to fully hosted solution',
+        'Lifetime technical support on hosted solutions',
+        'Photography & graphic design discounts'
       ]
     }
   ]
@@ -77,7 +87,7 @@ export default function Home() {
         </p>
         <a href="mailto:contact@youmeandhe.com" className="text-sm px-4 py-2 border-stone-800 border-2 border-solid hover:bg-stone-800 hover:text-stone-50 inline-flex gap-1 items-center">
           <EnvelopeIcon className="h-6 w-6"/>
-          Connect with us
+          Connect
         </a>
       </section>
       <section className="pb-16">
@@ -86,14 +96,14 @@ export default function Home() {
       <section>
       </section>
       <section id="pricing" className="w-full">
-        <h2 className="font-serif text-3xl font-bold text-stone-800 pb-4 flex items-center gap-1">
-        <TagIcon className="h-8" />
+        <h2 className="font-serif text-3xl font-bold text-stone-800 pb-4 flex items-center gap-2">
+        <BanknotesIcon className="h-8" />
         Pricing
         </h2>
         <p className="pb-6 text-stone-600">
           We’d love to capture your special moment to cherish for years to come.
-          If any of our prices don’t seem to work well for you, please feel free
-          to contact us, we’d like to work something out with you! Below you’ll
+          If any of our prices don’t seem to work well for you please feel free
+          to contact us.  We’d be happy to work something out with you! Below you’ll
           find what we typically charge for various occasions.
         </p>
         <article className="flex flex-col lg:flex-row gap-8 basis-0 items-stretch justify-between w-full">
@@ -112,7 +122,7 @@ export default function Home() {
                 {price.title}
               </h3>
               <span className="font-bold font-serif px-4">{price.price}</span>
-              <ul className="list-disc pl-8 p-2 pb-4">
+              <ul className="list-disc p-6 pt-2 pl-10">
                 {price.points.map(point => (
                   <li key={point}>{point}</li>
                 ))}
