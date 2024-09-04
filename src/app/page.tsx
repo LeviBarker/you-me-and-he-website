@@ -106,9 +106,10 @@ export default function Home() {
           to contact us.  We’d be happy to work something out with you! Below you’ll
           find what we typically charge for various occasions.
         </p>
-        <article className="flex flex-col lg:flex-row gap-8 basis-0 items-stretch justify-between w-full">
+        <article className="flex flex-col flex-wrap lg:flex-row basis-0 items-stretch justify-between w-full">
           {prices.map((price) => (
-            <div key={price.title} className="w-full shadow-lg rounded-lg hover:shadow-xl">
+            <div key={price.title} className="w-full lg:w-1/2 lg:pr-8 pb-8">
+         <div  className="w-full shadow-lg rounded-lg hover:shadow-xl">
               <div className="relative w-full h-64">
                 <Image
                   alt=""
@@ -127,6 +128,7 @@ export default function Home() {
                   <li key={point}>{point}</li>
                 ))}
                </ul>
+            </div>
             </div>
           ))}
         </article>
